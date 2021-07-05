@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+header {
+  display: grid;
+}
+
+.top-header {
+  display: grid;
+  grid-template-columns: 0.2fr 1fr auto auto 0.2fr;
+  grid-gap: 5px;
+  padding-top: 20px;
+}
+
+.logo {
+  font-size: 1.7rem;
+}
+
+.subtotal {
+  display: grid;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: 0.2fr 1fr auto auto 0.2fr;
+  justify-content: baseline;
+  grid-gap: 2rem;
+  list-style-type: none;
+  font-size: 1.5rem;
+  
+}
+
+.nave-li {
+  text-decoration: none;
+}
+
+.header-svg {
+  justify-self: end;
+}
+
+.basket-svg {
+  height: 40px;
+  width: 40px;
+}
+
+.login-button {
+  padding: 3px 20px;
+  border-radius: 5px;
+}
+
+
