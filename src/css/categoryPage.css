@@ -50,20 +50,19 @@ h1 {
    color: #575856; 
 }
 
-.button-wrapper {
+.button-add-price-wrapper {
     display: grid;
-    grid-template-columns: 1fr 0.2fr 0.2fr 0.2fr;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 0.5rem;
     place-items: center;
 }
 
-.product-button {
-    padding: 0.5em 1.1em;
+.product-button{
+    padding: 0.3em 0.7em;
     border-radius: 3px;
     background-color: #609CB3;
     color: white;
     border: 0;
-    font-size: 0.9em;
 }
 
 .frame {

@@ -2,7 +2,7 @@ import "../css/menu.css"
 import { Link, Route } from "react-router-dom"
 import CategoryPage from "./CategoryPage"
 
-function Menu({categories, menu, setMenu}) {
+function Menu({categories, menu, basket, setBasket, addItemToTheCart}) {
     return(
         <section className="menu">
              <div >
@@ -26,7 +26,7 @@ function Menu({categories, menu, setMenu}) {
                  </div>
                  </Route>
                  <Route path="/menu/:id">
-                     <CategoryPage menu={menu} setMenu={setMenu} />
+                    <CategoryPage menu={menu} basket={basket} setBasket={setBasket} addItemToTheCart={addItemToTheCart}  />
                  </Route>
                  
              </div>

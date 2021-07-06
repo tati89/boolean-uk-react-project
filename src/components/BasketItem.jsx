@@ -1,5 +1,5 @@
 
-function BasketItem({item}) {
+function BasketItem({item, increaseQuantity, decreseQuantity}) {
     return (
         <li key={item.id} >
             <article className="basket-container__item">
@@ -8,15 +8,15 @@ function BasketItem({item}) {
                 <p>
                 <div className="button-wrapper">
                       <div>
-                          <button className="product-button">-</button>
+                          <button onClick={() => decreseQuantity(item)} className="product-button">-</button>
                       </div>
-                      <span>1</span>
+                      <span>{item.quantity}</span>
                       <div>
-                          <button className="product-button">+</button>
+                          <button onClick={() => increaseQuantity(item)} className="product-button">+</button>
                       </div>
                     </div>
                 </p>
-                <p>Item total: £{item.price}</p>
+                <p>Item total: £{(item.price * item.quantity).toFixed(2)}</p>
             <button className="delete-button">
                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
                 viewBox="0 0 50 50" enable-background="new 0 0 50 50" >

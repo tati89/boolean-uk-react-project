@@ -12,28 +12,7 @@ export default function App()  {
   const [menu, setMenu] = useState([])
   const [categories, setCategories] = useState([])
 
-  const [basket, setBasket] = useState([
-     {
-      "id": 2,
-      "title": "Garlic bread with cheese ",
-      "price": 5.25,
-      "description": "A touch of tomato sauce, with mozarella, garlic and oregano.",
-      "vegan": true,
-      "quantity": 1,
-      "categoryId": 1,
-      "img": "https://www.inspiredtaste.net/wp-content/uploads/2012/11/Garlic-Bread-Recipe-2-1200.jpg"
-    },
-    {
-      "id": 3,
-      "title": "Tabla De Jamon Serrano y Queso Manchego ",
-      "price": 9.95,
-      "description": "Serrano ham and Manchego cheese board serve with focaccia bread.",
-      "vegan": false,
-      "quantity": 2,
-      "categoryId": 1,
-      "img": "https://img.blogs.es/alhambra2/wp-content/uploads/2020/01/tabla1-1080x675.jpg"
-    },
-  ])
+  const [basket, setBasket] = useState([])
 
   useEffect(() => {
     fetch("http://localhost:4000/menu")
@@ -44,6 +23,40 @@ export default function App()  {
     .then((res) => res.json())
     .then(setCategories)
   }, [])
+
+  function addItemToTheCart(clickedItem) {
+        const foundItemInBasket = basket.find(item => item.id === clickedItem.id)
+        if (foundItemInBasket) {
+            increaseQuantity(foundItemInBasket)
+        } else {
+            setBasket([...basket, {...clickedItem, quantity: 1}])
+        }
+    }
+
+    function increaseQuantity(clickedItem) {
+        const updatedBasket = basket.map(item => {
+            if (item.id === clickedItem.id) {
+                return {...item, quantity: item.quantity + 1}
+            } else {
+                return item
+            }
+        })
+        setBasket(updatedBasket)
+    }
+
+    console.log(basket)
+
+    function decreseQuantity(clickedItem) {
+        const updatedBasket = basket.map(item => {
+            if (item.id === clickedItem.id) {
+                return {...item, quantity: item.quantity - 1}
+            } else {
+                return item
+            }
+        }).filter(item =>  item.quantity > 0)
+        setBasket(updatedBasket)
+        console.log(basket)
+    }
 
   function checkOut() {
     <Route path="/basket" exact>
@@ -69,13 +82,17 @@ export default function App()  {
               <Home />
             </Route>
             <Route path="/menu" >
-               <Menu categories={categories} menu={menu} setMenu={setMenu} />
+               <Menu categories={categories} 
+                  menu={menu} basket={basket} 
+                  setBasket={setBasket} 
+                  addItemToTheCart={addItemToTheCart} 
+               />
             </Route>
             <Route path="/reviews">
                <Reviews />
             </Route>
             <Route path="/basket">
-               <Basket basket={basket} total={total} />
+               <Basket basket={basket} total={total} increaseQuantity={increaseQuantity} decreseQuantity={decreseQuantity} />
             </Route>
           </Switch>
         </main>

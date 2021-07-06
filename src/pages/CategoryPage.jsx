@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useParams } from "react-router-dom"
 import "../css/categoryPage.css"
 
-function CategoryPage({menu}) {
+function CategoryPage({menu, basket, setBasket, addItemToTheCart}) {
     const [showVegeterian, setShowVegeterian] = useState(false)
    
     const {id} = useParams()
@@ -20,6 +20,7 @@ function CategoryPage({menu}) {
     function showVegetarianOptions(e) {
         setShowVegeterian(e)
     }
+
 
     return (
         <section>
@@ -55,14 +56,10 @@ function CategoryPage({menu}) {
                             </svg> : ""}
                         </div>
                         <span className="product-title">{item.title}</span>
-                        <div className="button-wrapper">
+                        <div className="button-add-price-wrapper">
                             <span>£{item.price}</span>
                             <div>
-                                <button className="product-button">-</button>
-                            </div>
-                            <span>1</span>
-                            <div>
-                                <button className="product-button">+</button>
+                                <button onClick={() => addItemToTheCart(item)} className="product-button"> ADD </button>
                             </div>
                         </div>
                     </div>       
