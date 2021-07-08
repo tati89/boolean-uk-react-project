@@ -26,7 +26,88 @@
       "img": "https://images.pexels.com/photos/2377173/pexels-photo-2377173.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
     }
   ],
-  "reviews": [],
+  "reviews": [
+    {
+      "id": 1,
+      "img": "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+      "firstName": "Jane",
+      "lasrName": "Lavina",
+      "text": "Very good pizza, great tapas, good food and nice people. If you're craving for some good Italian food with a twist, I definitely recommend this place!",
+      "city": "London"
+    },
+    {
+      "id": 2,
+      "img": "https://images.pexels.com/photos/1006265/pexels-photo-1006265.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+      "firstName": "Marcus",
+      "lasrName": "Sanders",
+      "text": "Been here with the family as well as mates of our who also have kids. While the place itself can be a bit cramped in places the food is actually very good with great pizzas cooked from a genuine wood fire oven. Had a great time overall.",
+      "city": "London"
+    },
+    {
+      "id": 3,
+      "img": "https://images.pexels.com/photos/2558605/pexels-photo-2558605.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+      "firstName": "Eva",
+      "lasrName": "Deleny",
+      "text": "Two mains and a bottle of wine £32! My kind of place. Would recommend going for a slightly better wine than the cheapest though. Food was lovely and filling. Little touches, such as free olives before the main. Loved it!",
+      "city": "London"
+    },
+    {
+      "id": 4,
+      "img": "https://images.pexels.com/photos/156934/pexels-photo-156934.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+      "firstName": "Jastin",
+      "lasrName": "Blany",
+      "text": "Simple - friendly - local - community - fresh homemade dough - delicious toppings - great service - family/kids - cold beer - friends - great value for money and all those things you expect from your local pizzeria.",
+      "city": "London"
+    },
+    {
+      "id": 5,
+      "img": "https://images.pexels.com/photos/3136340/pexels-photo-3136340.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+      "firstName": "Sarah",
+      "lasrName": "Bazililicata",
+      "text": "Pizzas are made freshly in the pizza oven in front of you. Compare with Naples fresh pizzas. I did enjoy it here, a really great place to take the kids. Both of my children were very happy here. The sevice is friendly. A unexpected gem. Very reasonably priced.",
+      "city": "London"
+    },
+    {
+      "id": 6,
+      "img": "https://images.pexels.com/photos/733416/pexels-photo-733416.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+      "firstName": "Marco",
+      "lasrName": "Foldison",
+      "text": "Although next to quite loud North Circular, it is always a pleasure to come and to enjoy the food here; crispy pizza, delightful Spaghetti Carbonara and a very affordable kids menu. The staff is extremely friendly and always in a good mood, prices are very reasonable and food is fine.",
+      "city": "London"
+    },
+    {
+      "id": 7,
+      "img": "https://images.pexels.com/photos/91224/pexels-photo-91224.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+      "firstName": "Dana",
+      "lasrName": "Lasna",
+      "text": "The place isn't much to look at but what it lacks in finesse and style it more than makes up for in the warm friendliness of the welcome and the serious deliciousness of the pizza. It is a place of stripped back beauty and all the better for it.",
+      "city": "London"
+    },
+    {
+      "id": 8,
+      "img": "https://images.pexels.com/photos/220444/pexels-photo-220444.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+      "firstName": "Sam",
+      "lasrName": "Hendricks",
+      "text": "This is a place that has opened in a location that had previously proved difficult. It serves pizza, pasta and tapas. Being just 10 minutes walk from my house, it is a delightful local. The staff are delightful and friendly. It does however get crowded on a Friday and Saturday....but that is not always a bad thing! If you are in the Bounds Green area, give it a go!",
+      "city": "London"
+    },
+    {
+      "id": 9,
+      "img": "https://images.pexels.com/photos/57627/pexels-photo-57627.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+      "firstName": "Lola",
+      "lasrName": "Cupina",
+      "text": "Great Saturday night for when you want to stay local and have a good value meal. Good wine list, well priced too. Variety of meals on offer: small Spanish tapas dishes to start and good pizza menu and small pasta menu. Had pizza (which had great crust). Followed by dessert (the only one on a verbal menu) tiramisu, lacked in coffee flavour, but not in size. Fantastic smiley service.",
+      "city": "London"
+    },
+    {
+      "id": 10,
+      "img": "https://images.pexels.com/photos/774731/pexels-photo-774731.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+      "firstName": "Mikey",
+      "lasrName": "Ford",
+      "text": "Simple - friendly - local - community - fresh homemade dough - delicious toppings - great service - family/kids - cold beer - friends - great value for money and all those things you expect from your local pizzeria",
+      "city": "London"
+    }
+  ],
   "users": [
     {
       "id": 1,
