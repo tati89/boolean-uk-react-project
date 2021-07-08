@@ -1,15 +1,56 @@
 {
   "categories": [
-    { "id": 1, "name": "Starters", "img": "https://images.pexels.com/photos/6488856/pexels-photo-6488856.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" },
-    { "id": 2, "name": "Salads", "img": "https://images.pexels.com/photos/1059905/pexels-photo-1059905.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" },
-    { "id": 3, "name": "Pizzas", "img": "https://images.pexels.com/photos/208537/pexels-photo-208537.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" },
-    { "id": 4, "name": "Pastas", "img": "https://images.pexels.com/photos/1527603/pexels-photo-1527603.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" },
-    { "id": 5, "name": "Deserts", "img": "https://images.pexels.com/photos/2377173/pexels-photo-2377173.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" }
+    {
+      "id": 1,
+      "name": "Starters",
+      "img": "https://images.pexels.com/photos/6488856/pexels-photo-6488856.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+    },
+    {
+      "id": 2,
+      "name": "Salads",
+      "img": "https://images.pexels.com/photos/1059905/pexels-photo-1059905.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+    },
+    {
+      "id": 3,
+      "name": "Pizzas",
+      "img": "https://images.pexels.com/photos/208537/pexels-photo-208537.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+    },
+    {
+      "id": 4,
+      "name": "Pastas",
+      "img": "https://images.pexels.com/photos/1527603/pexels-photo-1527603.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+    },
+    {
+      "id": 5,
+      "name": "Deserts",
+      "img": "https://images.pexels.com/photos/2377173/pexels-photo-2377173.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+    }
   ],
-
   "reviews": [],
-
-  "menu" : [ {
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Brad",
+      "lastName": "Brody",
+      "username": "Roni",
+      "password": "Password123",
+      "agreedToNews": true,
+      "phoneNumber": "07111111111",
+      "email": "hello@gmail.com"
+    },
+    {
+      "id": 2,
+      "firstName": "Lana",
+      "lastName": "Doe",
+      "username": "lanaMana",
+      "password": "Beauty123",
+      "agreedToNews": false,
+      "phoneNumber": "07222222222",
+      "email": "lana@gmail.com"
+    }
+  ],
+  "menu": [
+    {
       "id": 1,
       "title": "Mixed green and black olives",
       "price": 2.95,
@@ -84,7 +125,7 @@
     {
       "id": 9,
       "title": "Melanzana Parmigiana",
-      "price": 5.50,
+      "price": 5.5,
       "description": "Baked aubergine with fresh tomatoes sauce, basil, mozarella and parmesan cheese.",
       "vegan": true,
       "categoryId": 1,
@@ -288,7 +329,7 @@
       "categoryId": 4,
       "img": "https://cdn.trovaricetta.com/photo/2016/11/22/1774853/b/spaghetti-friarielli-e-salsiccia.jpg"
     },
-     {
+    {
       "id": 32,
       "title": "Tiramisu",
       "price": 5.45,

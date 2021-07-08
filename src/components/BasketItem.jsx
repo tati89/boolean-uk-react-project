@@ -1,5 +1,9 @@
 
-function BasketItem({item, increaseQuantity, decreseQuantity}) {
+function BasketItem({item, basket, setBasket, increaseQuantity, decreseQuantity}) {
+    function removeItemFromBasket(clickedItem) {
+        const updatedBasket = basket.filter(item => item.id != clickedItem.id)
+        setBasket(updatedBasket)
+    }
     return (
         <li key={item.id} >
             <article className="basket-container__item">
@@ -17,7 +21,7 @@ function BasketItem({item, increaseQuantity, decreseQuantity}) {
                     </div>
                 </p>
                 <p>Item total: £{(item.price * item.quantity).toFixed(2)}</p>
-            <button className="delete-button">
+            <button onClick={() => removeItemFromBasket(item)} className="delete-button">
                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
                 viewBox="0 0 50 50" enable-background="new 0 0 50 50" >
                 <path fill="#231F20" d="M10.289,14.211h3.102l1.444,25.439c0.029,0.529,0.468,0.943,0.998,0.943h18.933

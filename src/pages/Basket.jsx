@@ -1,6 +1,6 @@
 import BasketItem from "../components/BasketItem"
 import "../css/basket.css"
-function Basket({basket, total, increaseQuantity, decreseQuantity}) {
+function Basket({basket, setBasket, total, increaseQuantity, decreseQuantity}) {
    
     return (
         
@@ -11,7 +11,7 @@ function Basket({basket, total, increaseQuantity, decreseQuantity}) {
     </div>
     <ul>
         {basket.map(item => (
-            <BasketItem item={item} increaseQuantity={increaseQuantity} decreseQuantity={decreseQuantity}/>
+            <BasketItem key={item.id} item={item} basket={basket} setBasket={setBasket} increaseQuantity={increaseQuantity} decreseQuantity={decreseQuantity}/>
         ))}
     </ul>
     <h3>Total: £{total.toFixed(2)}</h3>

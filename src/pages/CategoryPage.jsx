@@ -2,19 +2,27 @@ import { useState } from "react";
 import { useParams } from "react-router-dom"
 import "../css/categoryPage.css"
 
-function CategoryPage({menu, basket, setBasket, addItemToTheCart}) {
+function CategoryPage({menu, basket, setBasket, addItemToTheCart, searchInput}) {
     const [showVegeterian, setShowVegeterian] = useState(false)
    
     const {id} = useParams()
 
-    let filteredMenu = menu
+
+    let filteredMenu = menu 
+
+    if (searchInput) {
+        filteredMenu = filteredMenu.filter((item) => 
+            item.title.toLowerCase().includes(searchInput.toLowerCase()) ||
+            item.description.toLowerCase().includes(searchInput.toLowerCase())
+        )
+    }
 
     if (id) {
-        filteredMenu = menu.filter((item) => item.categoryId === Number(id));
+        filteredMenu = filteredMenu.filter((item) => item.categoryId === Number(id));
     }
 
     if (showVegeterian) {
-        filteredMenu = menu.filter((item) => item.vegan === showVegeterian && item.categoryId === Number(id) );
+        filteredMenu = filteredMenu.filter((item) => item.vegan === showVegeterian );
     }
 
     function showVegetarianOptions(e) {
@@ -41,7 +49,7 @@ function CategoryPage({menu, basket, setBasket, addItemToTheCart}) {
                 {filteredMenu.map(item => {
                 
                     return (
-                    <div className="product-card">
+                    <div key={item.id} className="product-card">
                         <div className="frame">
                             <img src={item.img} alt="img" />
                         </div>

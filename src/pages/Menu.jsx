@@ -2,7 +2,7 @@ import "../css/menu.css"
 import { Link, Route } from "react-router-dom"
 import CategoryPage from "./CategoryPage"
 
-function Menu({categories, menu, basket, setBasket, addItemToTheCart}) {
+function Menu({categories, menu, basket, setBasket, addItemToTheCart, searchInput}) {
     return(
         <section className="menu">
              <div >
@@ -17,16 +17,16 @@ function Menu({categories, menu, basket, setBasket, addItemToTheCart}) {
                  <Route exact path="/menu">
                      <div className="menu-wrapper">
                      {categories.map(category => (
-                        <div className="menu-category" style={{ 
+                        <div key={category.id} className="menu-category" style={{ 
                             backgroundImage: `url(${category.img})`
                             }}>
-                            <Link to={`/menu/${category.id}`}  className="category-link"><p className="category-title">{category.name}</p> </Link>
+                            <Link key={category.id} to={`/menu/${category.id}`}  className="category-link"><p className="category-title">{category.name}</p> </Link>
                         </div>
                      ))}  
                  </div>
                  </Route>
                  <Route path="/menu/:id">
-                    <CategoryPage menu={menu} basket={basket} setBasket={setBasket} addItemToTheCart={addItemToTheCart}  />
+                    <CategoryPage menu={menu} basket={basket} setBasket={setBasket} addItemToTheCart={addItemToTheCart} searchInput={searchInput}  />
                  </Route>
                  
              </div>

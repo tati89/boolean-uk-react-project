@@ -1,0 +1,48 @@
+.wrapper-sighn-up {
+    height: 60vh;
+}
+
+.login-form {
+    display: grid;
+    grid-gap: 10px;
+    width: 20rem;
+    margin: auto;
+}
+
+.register-title {
+    font-size: x-large;
+}
+
+.first-last-name {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+}
+
+.label {
+    display: grid;
+    place-content: baseline;
+    font-size: small;
+}
+
+.login-input {
+    height: 1.5rem;
+}
+
+.sighn-btn,
+.sighn-up-btn {
+  padding: 7px 12px;
+  border-radius: 5px;
+  background-color: #609CB3;
+  color: white;
+  border: 0;
+}
+
+.sighn-up {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.newsLetters {
+    font-size: small;
+}

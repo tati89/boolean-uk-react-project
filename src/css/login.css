@@ -1,0 +1,47 @@
+.wrapper {
+    height: 60vh;
+}
+
+.login-form {
+    display: grid;
+    grid-gap: 10px;
+    width: 20rem;
+    margin: auto;
+}
+
+.login-title {
+    font-size: x-large;
+}
+
+.label {
+    display: grid;
+    place-content: baseline;
+    font-size: small;
+}
+
+.login-input {
+    height: 1.5rem;
+}
+
+.dont-have-account-title {
+    font-size: small;
+}
+
+.sighn-btn,
+.sighn-up-btn {
+  padding: 7px 12px;
+  border-radius: 5px;
+  background-color: #609CB3;
+  color: white;
+  border: 0;
+}
+
+.sighn-up {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.sighn-up-link {
+    text-decoration: none;
+    color: #30748f;
+}

@@ -7,11 +7,15 @@ import Menu from "./pages/Menu";
 import Reviews from "./pages/Reviews";
 import Basket from "./pages/Basket";
 import Home from "./pages/Home";
+import Login from "./pages/Login";
+import SighnUp from "./pages/SighnUp";
 
 export default function App()  {
   const [menu, setMenu] = useState([])
   const [categories, setCategories] = useState([])
-
+  const [users, setUsers] = useState([])
+  const [loggedinUser, setloggedinUser] = useState("")
+  const [searchInput, setSearchInput] = useState('')
   const [basket, setBasket] = useState([])
 
   useEffect(() => {
@@ -22,6 +26,10 @@ export default function App()  {
     fetch("http://localhost:4000/categories")
     .then((res) => res.json())
     .then(setCategories)
+
+    fetch("http://localhost:4000/users")
+    .then((res) => res.json())
+    .then(setUsers)
   }, [])
 
   function addItemToTheCart(clickedItem) {
@@ -44,8 +52,6 @@ export default function App()  {
         setBasket(updatedBasket)
     }
 
-    console.log(basket)
-
     function decreseQuantity(clickedItem) {
         const updatedBasket = basket.map(item => {
             if (item.id === clickedItem.id) {
@@ -55,24 +61,23 @@ export default function App()  {
             }
         }).filter(item =>  item.quantity > 0)
         setBasket(updatedBasket)
-        console.log(basket)
     }
 
-  function checkOut() {
-    <Route path="/basket" exact>
-        <Basket />
-     </Route>
-  }
+    const logOut = () => {
+      setloggedinUser(null);
+      <Route path="/" exact>
+        <Redirect to="/home"/>
+      </Route>
+    };
 
-  let total = 0;
-   for (const item of basket) {
-    total += item.quantity * item.price;
-   }
+    let total = 0;
+    for (const item of basket) {
+      total += item.quantity * item.price;
+    }
 
     return (
     <div className="App">
-       <Header checkOut={checkOut} total={total} />
-      <body>
+       <Header  total={total} loggedinUser={loggedinUser}  logOut={logOut} searchInput={searchInput} setSearchInput={setSearchInput} />
         <main>
           <Switch>
             <Route path="/" exact>
@@ -81,22 +86,28 @@ export default function App()  {
             <Route path="/home" >
               <Home />
             </Route>
+            <Route path="/login" >
+                {loggedinUser ? <Redirect to="/menu" /> : <Login users={users} setUsers={setUsers} loggedinUser={loggedinUser} setloggedinUser={setloggedinUser} />}
+            </Route>
+            <Route path="/sighnUp">
+              <SighnUp users={users} setUsers={setUsers} />
+            </Route>
             <Route path="/menu" >
                <Menu categories={categories} 
                   menu={menu} basket={basket} 
                   setBasket={setBasket} 
-                  addItemToTheCart={addItemToTheCart} 
+                  addItemToTheCart={addItemToTheCart}
+                  searchInput={searchInput} 
                />
             </Route>
             <Route path="/reviews">
                <Reviews />
             </Route>
             <Route path="/basket">
-               <Basket basket={basket} total={total} increaseQuantity={increaseQuantity} decreseQuantity={decreseQuantity} />
+               <Basket basket={basket} setBasket={setBasket} total={total} increaseQuantity={increaseQuantity} decreseQuantity={decreseQuantity} />
             </Route>
           </Switch>
         </main>
-      </body>
     </div>
   );
 

@@ -1,11 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, Route } from "react-router-dom";
 import "../css/header.css"
-function Header({checkOut, total}) {
+
+
+function Header({ total, loggedinUser, onSighnIn, logOut, searchInput, setSearchInput}) {
+        
     return (
         <header className="header">
           <div className="top-header">
             <div className="login-div">
-              <Link className="logon-link">Login</Link>
+              {loggedinUser ? `${loggedinUser.username} | `: <Link to="/login" className="logon-link">Login</Link>}
+              {loggedinUser ? <Link to="/" className="nave-li"><button onClick={logOut} className="logon-link">Log out</button></Link> : ""}
             </div>
             <div>
               <h1 className="logo">Bella Pizzalia</h1>
@@ -17,7 +21,7 @@ function Header({checkOut, total}) {
             <div className="subtotal">
               <span>Subtotal: <br />£{total.toFixed(2)}</span>
             </div >
-            <Link to="/basket" className="nave-li"><button onClick={() => checkOut} className="login-button">Checkout</button></Link>
+            <Link to="/basket" className="nave-li"><button className="login-button">Checkout</button></Link>
           </div>
 
             <nav className="header-bottom-nav">
@@ -34,7 +38,9 @@ function Header({checkOut, total}) {
               <li></li> 
               <li>
                 <form>
-                  <input className="search-input" placeholder="Search.."></input>
+                  <input onChange={event => {
+                    setSearchInput(event.target.value)
+                    }} className="search-input" value={searchInput} placeholder="Search.."></input>
                 </form>
               </li>
             </ul>
