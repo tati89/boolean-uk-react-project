@@ -117,7 +117,8 @@
       "password": "Password123",
       "agreedToNews": true,
       "phoneNumber": "07111111111",
-      "email": "hello@gmail.com"
+      "email": "hello@gmail.com",
+      "basket": []
     },
     {
       "id": 2,
@@ -127,7 +128,8 @@
       "password": "Beauty123",
       "agreedToNews": false,
       "phoneNumber": "07222222222",
-      "email": "lana@gmail.com"
+      "email": "lana@gmail.com",
+      "basket": [1, 2]
     }
   ],
   "menu": [

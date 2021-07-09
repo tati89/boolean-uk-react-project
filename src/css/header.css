@@ -7,20 +7,21 @@ header {
   grid-template-columns: 0.2fr 1fr auto auto 0.2fr;
   grid-gap: 10px;
   padding: 30px 0px;
-  background-color: #E7E0DC;
+  background-color: #e7e0dc;
 }
 
 .logon-link {
   text-decoration: none;
   color: #565755;
   font-size: 1.2rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .logo {
   font-size: 3.5rem;
   font-weight: 550;
   color: #585655;
+  font-family: Snell Roundhand, cursive;
 }
 
 .svg-logo {
@@ -28,7 +29,8 @@ header {
 }
 
 .eat-drink-enjoy {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .subtotal {
@@ -47,7 +49,7 @@ header {
 .login-button {
   padding: 10px 20px;
   border-radius: 5px;
-  background-color: #609CB3;
+  background-color: #609cb3;
   color: white;
   border: 0;
 }
@@ -58,7 +60,6 @@ header {
 .nave-li {
   padding-top: 15px;
 }
-
 
 /* BOTTOM HEADER */
 .header-bottom-nav {
@@ -74,18 +75,29 @@ header {
   list-style-type: none;
   font-size: 1.5rem;
   padding-right: 10px;
-  
 }
 
 .nave-li {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  /* font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif; */
+  font-family: Gill Sans, sans-serif;
   text-decoration: none;
-  font-size: 1.3rem;
-  color: #51545C;
+  font-size: 1.5rem;
+  color: #51545c;
+}
+
+.nave-li:hover {
+  color: #8a807b;
 }
 
 .search-input {
- padding: 10px;
- border: 1px solid #E7E0DC;
- border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #e7e0dc;
+  border-radius: 5px;
+}
+
+.log-out {
+  border: 0;
+  background-color: #e7dfdc;
+  font-weight: 600;
 }

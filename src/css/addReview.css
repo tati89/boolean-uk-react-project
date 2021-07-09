@@ -1,8 +1,8 @@
-.wrapper-sighn-up {
+.post-review-wrapper {
   height: 60vh;
 }
 
-.sighn-up-form {
+.post-review-form {
   display: grid;
   grid-gap: 10px;
   width: 20rem;
