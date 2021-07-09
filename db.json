@@ -106,6 +106,14 @@
       "lasrName": "Ford",
       "text": "Simple - friendly - local - community - fresh homemade dough - delicious toppings - great service - family/kids - cold beer - friends - great value for money and all those things you expect from your local pizzeria",
       "city": "London"
+    },
+    {
+      "firstName": "Val",
+      "lasrName": "Raynolds",
+      "text": "Beautiful place!",
+      "city": "London",
+      "img": "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+      "id": 11
     }
   ],
   "users": [
@@ -129,7 +137,20 @@
       "agreedToNews": false,
       "phoneNumber": "07222222222",
       "email": "lana@gmail.com",
-      "basket": [1, 2]
+      "basket": [
+        1,
+        2
+      ]
+    },
+    {
+      "firstName": "Valentina",
+      "lastName": "Rainolds",
+      "email": "val@gmail.com",
+      "phoneNumber": "222",
+      "username": "Val",
+      "password": "111",
+      "agreedToNews": true,
+      "id": 3
     }
   ],
   "menu": [

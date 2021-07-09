@@ -84,14 +84,21 @@ export default function App() {
   };
 
   let total = 0;
+  let quantity = 0;
+
   for (const item of basket) {
     total += item.quantity * item.price;
+  }
+
+  for (const item of basket) {
+    quantity += item.quantity;
   }
 
   return (
     <div className="App">
       <Header
         total={total}
+        quantity={quantity}
         loggedinUser={loggedinUser}
         logOut={logOut}
         searchInput={searchInput}

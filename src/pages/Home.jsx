@@ -1,7 +1,5 @@
 import "../css/home.css";
-// https://images.pexels.com/photos/2274787/pexels-photo-2274787.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500
 
-// https://images.pexels.com/photos/1566837/pexels-photo-1566837.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500
 function Home() {
   return (
     <section className="home-section">

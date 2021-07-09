@@ -39,10 +39,14 @@ function Basket({
       <h3>Total: £{total.toFixed(2)}</h3>
       <div className="pay-btn-wrapper">
         {isPayable ? (
-          <Modal buttonLabel={<span className="pay-button">Pay</span>}>
-            <span className="product-title">Your order has been placed</span>
-            <p>{`Total payment £${total}`}</p>
-          </Modal>
+          <>
+            <Modal buttonLabel={<span className="pay-button">Checkout</span>}>
+              <p>{`Total payment £${total.toFixed(2)}`}</p>
+              <button className="pay-button" onClick={() => setBasket([])}>
+                Pay
+              </button>
+            </Modal>
+          </>
         ) : (
           "Not enough products to purchase"
         )}
